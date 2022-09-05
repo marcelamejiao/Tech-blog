@@ -4,6 +4,16 @@
   <p>Created by {{user.username}} on {{format_date date_created}}</p>
 </div>
 
+{{#each comments as |comment|}}
+<div>
+  <div>
+    {{comment.user_comment}}
+    {{comment.user.username}}
+  </div>
+
+</div>
+{{/each}}
+
 <div>
   Comment
   <textarea id="new-comment"></textarea>

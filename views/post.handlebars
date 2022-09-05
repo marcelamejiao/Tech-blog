@@ -1,4 +1,4 @@
-<div class="text-center">
+<div class="text-center post" data-post="{{id}}">
   <h2>{{title}}</h2>
   <p>{{content}}</p>
   <p>Created by {{user.username}} on {{format_date date_created}}</p>
@@ -6,6 +6,8 @@
 
 <div>
   Comment
-  <textarea></textarea>
-  <button class="btn btn-primary">Submit</button>
+  <textarea id="new-comment"></textarea>
+  <button class="btn btn-primary" id="send">Submit</button>
 </div>
+
+<script src="/js/newComment.js"></script>

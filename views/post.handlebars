@@ -1,4 +1,4 @@
-<div class="text-center post" data-post="{{id}}">
+<div class="text-center post border border-info rounded mb-2" data-post="{{id}}">
   <h2>{{title}}</h2>
   <p>{{content}}</p>
   <p>Created by {{user.username}} on {{format_date date_created}}</p>
@@ -19,7 +19,7 @@
   </div>
   <div class="card-body container">
     <textarea id="new-comment" class="col-12"></textarea>
-    <button class="btn btn-primary" id="send">Submit</button>
+    <button class="btn btn-info active" id="send">Submit</button>
   </div>
 </div>
 

@@ -2,11 +2,11 @@
 {{#each posts as |post|}}
 <div class="card text-white bg-info mb-3">
   <div class="card-header container">
-    <a href="/post/{{id}}" class="col-3">{{title}}</a>
-    <span class="col-9">Posted by {{user.username}} on {{format_date date_created}}</span>
+    <h4 class="col-3 row"><a href="/post/{{id}}" class="text-light font-weight-bold">{{title}}</a></h4>
+    <span class="col-9 row">Posted by {{user.username}} on {{format_date date_created}}</span>
   </div>
   <div class="card-body">
-    <p class="card-text">{{content}}</p>
+    <p class="card-text bg-light text-dark p-2 rounded">{{content}}</p>
   </div>
 </div>
 {{/each}}

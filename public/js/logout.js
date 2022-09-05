@@ -1,4 +1,6 @@
-const logout = async (shouldRedirect) => {
+const logout = async (event, shouldRedirect) => {
+  event.preventDefault();
+  
   if (shouldRedirect === undefined) {
     shouldRedirect = true;
   }
@@ -21,5 +23,5 @@ document.querySelector('#logout').addEventListener('click', logout);
 
 // Log the user out if idle for 15 minutes
 setTimeout(() => {
-  logout(false);
+  logout({}, false);
 }, 15 * 60 * 1000);

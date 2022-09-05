@@ -1,13 +1,23 @@
-<div>
-    <h2>Edit Post</h2>
+<div class="card text-white bg-info mb-3">
+  <div class="card-header container">
+    <h4>Edit Post</h4>
+  </div>
+  <div class="card-body container">
     <form class="post" data-post="{{id}}">
-        <label for="post-title">Title</label>
-        <input type="text" name="title" id="post-title" value="{{title}}" />
-        <label for="post-content">Content</label>
-        <textarea id="post-content" name="content">{{content}}</textarea>
-        <button id="update-post">Update Post</button>
-        <button id="delete-post">Delete</button>
+        <div>
+            <label class="col-12 row" for="post-title">Title</label>
+            <input class="col-12" type="text" name="title" id="post-title" value="{{title}}" />
+        </div>
+        <div>
+            <label class="col-12 row" for="post-content">Content</label>
+            <textarea class="col-12" id="post-content" name="content">{{content}}</textarea>
+        </div>
+        <div class="d-flex justify-content-center">
+            <button id="update-post" class="btn btn-info active mx-2">Update Post</button>
+            <button id="delete-post" class="btn btn-info active mx-2">Delete</button>
+        </div>
     </form>
+  </div>
 </div>
 
 <script src="/js/updatePost.js"></script>

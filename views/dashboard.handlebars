@@ -5,7 +5,7 @@
 </div>
 
 <div class="row mt-4">
-  <div class="col-md-6">
+  <div class="col-md-6 new-post d-none">
     <h3>Create a New Post</h3>
 
     <form class="form new-post-form">
@@ -24,7 +24,7 @@
   </div>
 
   {{#if posts.length}}
-  <div class="col-md-6 post-list">
+  <div class="col-md-12 post-list">
 
     {{#each posts as |post|}}
     <div class="row mb-2">
@@ -38,6 +38,10 @@
     {{/each}}
   </div>
   {{/if}}
+
+  <div class="col-12">
+    <button id="show-new-post" class="btn btn-info">+ New Post</button>
+  </div>
 </div>
 
 <script src="/js/dashboard.js"></script>

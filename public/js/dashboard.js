@@ -22,4 +22,17 @@ const createPost = async (event) => {
     }
 };
 
+const showNewPost = async (event) => {
+    event.preventDefault();
+
+    const newPostDiv = document.querySelector('.new-post');
+    const postListDiv = document.querySelector('.post-list');
+
+    newPostDiv.classList.remove('d-none');
+    postListDiv.classList.add('d-none');
+
+    event.target.classList.add('d-none');
+};
+
 document.querySelector("#create-post").addEventListener('click', createPost);
+document.querySelector("#show-new-post").addEventListener('click', showNewPost);

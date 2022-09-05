@@ -24,4 +24,26 @@ const updatePost = async (event) => {
     }
 };
 
+const deletePost = async (event) => {
+	event.preventDefault();
+
+    const post = document.querySelector(".post")
+    const postId = post.getAttribute("data-post");
+
+
+    const response = await fetch(`/api/posts/${postId}`, {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' },
+    });
+
+    if (response.ok) {
+        document.location.replace('/dashboard');
+    } else {
+        alert(
+            'Failed to delete a post.' 
+        );
+    }
+};
+
 document.querySelector("#update-post").addEventListener('click', updatePost);
+document.querySelector("#delete-post").addEventListener('click', deletePost);

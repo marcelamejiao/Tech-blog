@@ -5,19 +5,22 @@
 </div>
 
 {{#each comments as |comment|}}
-<div>
-  <div>
-    {{comment.user_comment}}
-    {{comment.user.username}}
+<div class="card text-white bg-info mb-3">
+  <div class="card-body">
+    <p class="card-text">{{comment.user_comment}}</p>
+    <p class="card-text">- {{comment.user.username}}, {{format_date comment.date_created}}</p>
   </div>
-
 </div>
 {{/each}}
 
-<div>
-  Comment
-  <textarea id="new-comment"></textarea>
-  <button class="btn btn-primary" id="send">Submit</button>
+<div class="card text-white bg-info mb-3">
+  <div class="card-header container">
+    <h4>Add a comment</h4>
+  </div>
+  <div class="card-body container">
+    <textarea id="new-comment" class="col-12"></textarea>
+    <button class="btn btn-primary" id="send">Submit</button>
+  </div>
 </div>
 
 <script src="/js/newComment.js"></script>
